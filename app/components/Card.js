@@ -1,3 +1,5 @@
+'use client'
+
 import axios from "axios"
 import { MdDelete } from "react-icons/md";
 
