@@ -27,7 +27,7 @@ const signInPage=()=>{
     }
 
     else{
-        return router.push('/')
+        return <div className='min-h-[76vh] flex items-center justify-center'> <button className='p-4 bg-[blue] text-white font-bold text-2xl' onClick={()=> router.push("/") }> Show site </button> </div>
     }
 }
 
