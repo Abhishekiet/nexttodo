@@ -2,6 +2,7 @@
 
 import { signIn, useSession } from 'next-auth/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 const signInPage=()=>{ 
@@ -26,8 +27,12 @@ const signInPage=()=>{
         return <div className='min-h-[76vh] flex items-center justify-center'> <h1 className='text-3xl font-bold text-center'> Loading ... </h1> </div>
     }
 
-    else{
-        return <div className='min-h-[76vh] flex items-center justify-center'> <button className='p-4 bg-[blue] text-white font-bold text-2xl' onClick={()=> router.push("/") }> Show site </button> </div>
+    else{ 
+        return(
+        <div className='min-h-[76vh] flex items-center justify-center'>
+            <Link href="/"> <button className='p-4 bg-[blue] text-white font-bold text-2xl rounded-full'> View Site </button> </Link>
+        </div>    
+        )
     }
 }
 
