@@ -14,9 +14,6 @@ export const authOptions = {
     error: '/api/auth/error',
   },
   secret: process.env.NEXTAUTH_SECRET,
-  session: {
-    strategy: 'jwt'
-  }
 }
 const handler = NextAuth(authOptions)
 
