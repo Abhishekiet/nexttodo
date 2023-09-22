@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import Card from '@/app/components/Card'
+import { FaSpinner } from "react-icons/fa";
 
 const Container=()=>{
     
@@ -19,7 +20,7 @@ const Container=()=>{
         fetchdata()
     }, )
     
-    
+    if( data ) {
     return(
         <div className='flex flex-col items-center mt-12'>
             {
@@ -27,6 +28,14 @@ const Container=()=>{
             }
         </div>
     )
+    }
+    else{
+        return(
+            <div className='flex flex-col items-center justify-center mt-12 animate-spin'>
+                <FaSpinner size={50}/>
+            </div>
+        )
+    }
 }
 
 export default Container
