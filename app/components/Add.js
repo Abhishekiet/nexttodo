@@ -18,7 +18,7 @@ const Add=()=>{
     
             <div className="flex w-[90%] flex-col mt-7 items-center justify-center gap-4">
                 <input className="w-[90%] h-14 shadow-2xl border-[2px] rounded-xl border-blue-900" onChange={ (e)=> setInput(e.target.value) } value={input}/>
-                <button onClick={addfun} className="bg-[blue] text-xl font-bold rounded-2xl p-4"> Add ToDo </button>
+                <button onClick={addfun} className="bg-[blue] text-xl text-white font-bold rounded-2xl p-4"> Add Item </button>
             </div>
     
         </div>
