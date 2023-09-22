@@ -22,7 +22,7 @@ const Container=()=>{
     
     if( data ) {
     return(
-        <div className='flex flex-col items-center mt-12'>
+        <div className='flex flex-col items-center mt-12 h-[40vh] overflow-scroll'>
             {
                 data?.map( a => <Card id={a._id} title={a.title} key ={a._id}  />  )
             }
