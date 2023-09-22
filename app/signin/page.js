@@ -28,11 +28,7 @@ const signInPage=()=>{
     }
 
     else{ 
-        return(
-        <div className='min-h-[76vh] flex items-center justify-center'>
-            <Link href="/"> <button className='p-4 bg-[blue] text-white font-bold text-2xl rounded-full'> View Site </button> </Link>
-        </div>    
-        )
+        router.push("/")
     }
 }
 
