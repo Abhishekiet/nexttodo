@@ -13,7 +13,10 @@ export const authOptions = {
     signIn: '/signin',
     error: '/api/auth/error',
   },
-  secret: process.env.NEXTAUTH_SECRET
+  secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    strategy: 'jwt'
+  }
 }
 const handler = NextAuth(authOptions)
 
